@@ -1,0 +1,42 @@
+<section class="filtros">
+    <div class="filtros-toggle" ng-click="toggle()">
+        <h3 class="filtros-title">Filtros</h3>
+        <i class="filtros-icon material-icons">{{ show ? 'expand_less': 'expand_more'}}</i>
+    </div>
+
+    <div class="filtros-wrapper" ng-class="{'filtros-wrapper-open': show}">
+        <div>
+            <label for="filtros-id">ID</label>
+            <input ng-model="filters.id" type="number" id="filtros-id">
+        </div>
+
+        <div class="filtros-area">
+            <label for="filtro-area">Área</label>
+            <input ng-model="filters.squareMeters" class="filtros-area-input" type="number" id="filtro-area">
+            <span class="filtros-area-context">m²</span>
+        </div>
+
+        <div class="filtros-separador"></div>
+
+        <div>
+            <label for="filtro-quartos">Quartos</label>
+            <input ng-model="filters.beds" type="number" id="filtro-quartos">
+        </div>
+
+        <div>
+            <label for="filtro-banheiros">Banheiros</label>
+            <input ng-model="filters.baths" type="number" id="filtro-banheiros">
+        </div>
+
+        <div class="filtros-separador"></div>
+
+        <div class="filtros-price-range">
+            <label for="filtro-valor-min">Valor</label>
+            <input ng-model="filters.price_min" ui-money-mask class="filtros-price-range-input" type="text" id="filtro-valor-min" placeholder="Mínimo">
+        </div>
+        <div class="filtros-price-range">
+            <label for="">&nbsp;</label>
+            <input ng-model="filters.price_max" ui-money-mask class="filtros-price-range-input" type="text" id="filtro-valor-max" placeholder="Máximo">
+        </div>
+    </div>
+</section>

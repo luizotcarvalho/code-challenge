@@ -1,0 +1,16 @@
+<section class="anuncios">
+    <div class="anuncios-filtros">
+        <filters filters="vm.filters"></filters>
+    </div>
+
+    <div ng-show="!vm.loading && (vm.properties | filter: vm.filterFunc).length" class="anuncios-lista">
+        <card ng-repeat="property in vm.properties | filter: vm.filterFunc" property="property"></card>
+    </div>
+
+    <div class="center">
+        <h1 ng-show="vm.loading">Carregando...</h1>
+        <h1 ng-show="!vm.loading && !(vm.properties | filter: vm.filterFunc).length">Não foi encontrado nenhum imóvel</h1>
+    </div>
+</section>
+
+

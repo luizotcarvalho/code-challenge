@@ -1,0 +1,33 @@
+<article class="card">
+
+    <div class="card-image" ng-style="{'background-image': 'url(http://lorempixel.com/400/300/city)'}">
+        <span class="card-price">{{::property.price | currency:"R$" }}</span>
+    </div>
+
+    <div class="card-content">
+        <header class="card-header">
+            <span class="card-header-id">ID. {{::property.id}}</span>
+            <h2 class="card-header-title">{{::property.title}}</h2>
+            <p class="card-header-description">{{::property.description}}</p>
+        </header>
+
+        <footer class="card-footer">
+            <ul class="card-footer-detail">
+                <li class="card-footer-detail-item">
+                    <i class="card-footer-detail-icon material-icons">texture</i>
+                    {{::property.squareMeters}} m²
+                </li>
+                <li class="card-footer-detail-item">
+                    <i class="card-footer-detail-icon material-icons">local_hotel</i>
+                    {{::property.beds}} quartos
+                </li>
+                <li class="card-footer-detail-item">
+                    <i class="card-footer-detail-icon material-icons">accessible</i>
+                    {{::property.baths}} banheiros
+                </li>
+            </ul>
+
+            <a ng-href="#/property/{{::property.id}}" class="card-footer-btn btn">Visualizar anúncio</a>
+        </footer>
+    </div>
+</article>

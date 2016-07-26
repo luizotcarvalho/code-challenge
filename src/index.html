@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="desafio">
+    <head>
+        <meta charset="utf-8">
+        <title>Spottipos - Anúncios</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Os melhores anúncios de imóveis é aqui!"/>
+        <meta name="tags" content="imoveis, anuncios, spottipos, vivareal"/>
+        <meta name="author" content="Luiz Otávio">
+
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Spottipos - Anúncios" />
+        <meta property="og:description" content="Os melhores anúncios de imóveis é aqui!" />
+        <meta property="og:url" content="http://www.spottipos.com.br" />
+
+        <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css({.tmp/serve,src}) styles/app.css -->
+        <!-- inject:css -->
+        <!-- endinject -->
+        <!-- endbuild -->
+    </head>
+    <body ng-controller="MainController as vm">
+    <!--[if lt IE 10]>
+        <p class="browsehappy">Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> para melhorar sua experiência.</p>
+    <![endif]-->
+
+    <navbar></navbar>
+
+    <sidebar></sidebar>
+
+    <main ng-view class="container"></main>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- endinject -->
+    <!-- endbuild -->
+    </body>
+</html>

@@ -1,0 +1,63 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #1190cd;
+    color: white;
+    min-width: $screen-phone-small-min;
+
+    .navbar-hamburguer,
+    .navbar-logo {
+        float: left;
+        background-color: #00acff;
+        text-align: center;
+        color: white;
+    }
+
+    .navbar-hamburguer {
+        padding: 0 10px;
+        display: none;
+        color: white;
+
+        @media (max-width: $screen-tablet-max) {
+            display: block;
+        }
+
+        .navbar-hamburguer-icon {
+            vertical-align: middle;
+        }
+
+    }
+
+    .navbar-logo {
+        padding: 0 30px;
+        text-align: center;
+
+        @media (max-width: $screen-tablet-max) {
+            padding: 0 8px;
+        }
+
+        .navbar-logo-image {
+            vertical-align: middle
+        }
+
+    }
+
+    .navbar-title {
+        float: left;
+        font-size: 24px;
+        margin: 0 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        .navbar-title-page {
+            @media (max-width: $screen-phone-max) {
+                display: none;
+            }
+        }
+    }
+}
