@@ -10,7 +10,7 @@ Algumas das ferramentas usadas no desenvolvimento:
 * **Test framework**: jasmine
 
 ##Pre-requisitos
-* `node` <= 0.12.x
+* `node` >= 0.12.x
 * `gulp-cli` instalado globalmente
 
 ##Setup
