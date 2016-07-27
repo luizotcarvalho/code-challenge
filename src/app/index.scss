@@ -1,26 +1,19 @@
-/* Do not remove the comments below. It's the markers used by wiredep to inject
-sass dependencies when defined in the bower.json of your dependencies */
 // bower:scss
 // endbower
 
 /// Variaveis para media queries
-/// Extra small screen / phone
 $screen-phone-small-min: 320px !default;
 $screen-phone-small-max: $screen-phone-small-min - 1 !default;
 
-/// Small screen / phone
 $screen-phone-min: 480px !default;
 $screen-phone-max: $screen-phone-min - 1 !default;
 
-/// Small screen / tablet
 $screen-tablet-min: 768px !default;
 $screen-tablet-max: $screen-tablet-min - 1 !default;
 
-/// Medium screen / desktop
 $screen-desktop-min: 1000px !default;
 $screen-desktop-max: $screen-desktop-min - 1 !default;
 
-/// Large screen / wide desktop
 $screen-monitor-min: 1300px !default;
 $screen-monitor-max: $screen-monitor-min - 1 !default;
 
@@ -36,11 +29,55 @@ $spacing-8: 64px;
 $spacing-9: 72px;
 $spacing-10: 80px;
 
-// typo
-
+// fonts
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+
+//reset
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #efefef;
+    margin: 0;
+    padding-top: 60px;
+    padding-left: 107px;
+    color: #999;
+    min-width: $screen-phone-small-min;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    @media (max-width: $screen-tablet-max) {
+        padding-left: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+// typo
 h2 {
     font-size: 18px;
     color: #444;
@@ -95,7 +132,7 @@ input {
     background-color: #fff;
 }
 
-
+// aviso de incompatibilidade
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -103,51 +140,5 @@ input {
     padding: 0.2em 0;
 }
 
-//reset
-
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    background-color: #efefef;
-    margin: 0;
-    padding-top: 60px;
-    padding-left: 107px;
-    color: #999;
-    min-width: $screen-phone-small-min;
-    font-family: 'Roboto Condensed', sans-serif;
-
-    @media (max-width: $screen-tablet-max) {
-        padding-left: 0;
-    }
-}
-
-a {
-    text-decoration: none;
-}
-
-ul,
-figure {
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    list-style: none;
-}
-
-
-/* Do not remove the comments below. It's the markers used by gulp-inject to inject
-all your sass files automatically */
 // injector
 // endinjector
